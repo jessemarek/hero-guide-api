@@ -46,10 +46,31 @@ exports.up = function (knex) {
             tbl.integer('p_armor').notNullable().unsigned()
             tbl.integer('m_armor').notNullable().unsigned()
         })
+        .createTable('medallions', tbl => {
+            //Primary Key
+            tbl.increments()
+
+            //Medallions
+            tbl.string('name', 128).notNullable()
+
+        })
+        .createTable('hero_medallions', tbl => {
+            //Primary Key
+            tbl.increments()
+
+            //Foreign Key hero_id => heroes.id
+            tbl.integer('hero_id').notNullable().unsigned().references('heroes.id')
+
+            //Foreign Key medallion_id => medallions.id
+            tbl.integer('medallion_id').notNullable().unsigned().references('medallions.id')
+
+        })
 };
 
 exports.down = function (knex) {
     return knex.schema
+        .dropTableIfExists('hero_medallions')
+        .dropTableIfExists('medallions')
         .dropTableIfExists('max_stat_growth')
         .dropTableIfExists('base_stat_growth')
         .dropTableIfExists('heroes')

@@ -7,6 +7,7 @@ module.exports = {
     findById
 }
 
+//CREATE
 async function add(hero) {
     try {
         const [id] = await db('heroes').insert(hero, 'id')
@@ -18,6 +19,7 @@ async function add(hero) {
     }
 }
 
+//READ
 function find() {
     return db('heroes')
 }
@@ -29,3 +31,7 @@ function findBy(filter) {
 function findById(id) {
     return db('heroes').where({ id }).first()
 }
+
+//UPDATE
+
+//DELETE

@@ -7,6 +7,7 @@ module.exports = {
     findById
 }
 
+//CREATE
 async function add(member) {
     try {
         const [id] = await db('credits').insert(member, 'id')
@@ -18,6 +19,7 @@ async function add(member) {
     }
 }
 
+//READ
 function find() {
     return db('credits')
 }
@@ -29,3 +31,7 @@ function findBy(filter) {
 function findById(id) {
     return db('credits').where({ id }).first()
 }
+
+//UPDATE
+
+//DELETE
