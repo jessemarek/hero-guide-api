@@ -4,6 +4,7 @@ module.exports = {
     add,
     find,
     findBy,
+    findHero,
     findById
 }
 
@@ -48,6 +49,10 @@ async function findBy(filter) {
     catch (error) {
         throw error
     }
+}
+
+function findHero(name) {
+    return db('heroes').where(name).select('id').first()
 }
 
 function findById(id) {

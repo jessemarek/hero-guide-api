@@ -1,5 +1,6 @@
 const router = require('express').Router()
 
+//Database connection
 const Credits = require('../../data/creditsData')
 
 router.get('/', (req, res) => {
