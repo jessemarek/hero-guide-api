@@ -23,7 +23,12 @@ exports.up = function (knex) {
             tbl.increments()
 
             //Foreign Key hero_id => heroes.id
-            tbl.integer('hero_id').notNullable().unsigned().references('heroes.id')
+            tbl.integer('hero_id')
+                .notNullable()
+                .unsigned()
+                .references('heroes.id')
+                .onDelete('RESTRICT')
+                .onUpdate('CASCADE')
 
             //Base Stat Growth columns
             tbl.integer('health').notNullable().unsigned()
@@ -37,7 +42,12 @@ exports.up = function (knex) {
             tbl.increments()
 
             //Foreign Key hero_id => heroes.id
-            tbl.integer('hero_id').notNullable().unsigned().references('heroes.id')
+            tbl.integer('hero_id')
+                .notNullable()
+                .unsigned()
+                .references('heroes.id')
+                .onDelete('RESTRICT')
+                .onUpdate('CASCADE')
 
             //Max Stat Growth columns
             tbl.integer('health').notNullable().unsigned()
@@ -59,10 +69,20 @@ exports.up = function (knex) {
             tbl.increments()
 
             //Foreign Key hero_id => heroes.id
-            tbl.integer('hero_id').notNullable().unsigned().references('heroes.id')
+            tbl.integer('hero_id')
+                .notNullable()
+                .unsigned()
+                .references('heroes.id')
+                .onDelete('RESTRICT')
+                .onUpdate('CASCADE')
 
             //Foreign Key medallion_id => medallions.id
-            tbl.integer('medallion_id').notNullable().unsigned().references('medallions.id')
+            tbl.integer('medallion_id')
+                .notNullable()
+                .unsigned()
+                .references('medallions.id')
+                .onDelete('RESTRICT')
+                .onUpdate('CASCADE')
 
         })
 };
