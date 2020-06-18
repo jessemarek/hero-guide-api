@@ -1,7 +1,7 @@
 
 exports.up = function (knex) {
     return knex.schema
-        //HERO INFO TABLE
+        //HERO INFO TABLES
         .createTable('heroes', tbl => {
             //Primary Key
             tbl.increments()

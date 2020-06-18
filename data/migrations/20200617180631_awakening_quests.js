@@ -1,7 +1,7 @@
 
 exports.up = function (knex) {
     return knex.schema
-        //HERO AWAKENING QUEST TABLE
+        //HERO AWAKENING QUEST TABLES
         .createTable('awakening_quests', tbl => {
             //Primary Key
             tbl.increments()

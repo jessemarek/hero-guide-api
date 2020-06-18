@@ -34,8 +34,35 @@ async function find() {
     }
 }
 
-async function findBy(filter) {
+function findBy(filter) {
+    return Promise.all([
 
+        getHeroInfo(filter),
+        getAwakeningQuest(filter)
+    ])
+        .then(data => {
+            return {
+                hero_info: data[0],
+                awakening: data[1]
+            }
+        })
+        .catch(error => error)
+}
+
+function findHero(name) {
+    return db('heroes').where(name).select('id').first()
+}
+
+function findById(id) {
+    return db('heroes').where({ id }).first()
+}
+
+//UPDATE
+
+//DELETE
+
+//Helper functions to gather all data for a specific Hero Guide
+async function getHeroInfo(filter) {
     try {
         const [heroInfo] = await db('heroes')
             .where(filter)
@@ -50,7 +77,14 @@ async function findBy(filter) {
             .join('max_stat_growth as mg', 'mg.hero_id', 'h.id')
             .select('mg.health', 'mg.p_attack', 'mg.m_attack', 'mg.p_armor', 'mg.m_armor')
 
+        const medallions = await db('heroes as h')
+            .where('h.name', filter.name)
+            .join('hero_medallions as hm', 'hm.hero_id', 'h.id')
+            .join('medallions as m', 'hm.medallion_id', 'm.id')
+            .select('m.name')
+
         heroInfo.stat_growth = [baseStats, maxStats]
+        heroInfo.medallions = medallions.map(m => m.name)
 
         return heroInfo
     }
@@ -59,14 +93,18 @@ async function findBy(filter) {
     }
 }
 
-function findHero(name) {
-    return db('heroes').where(name).select('id').first()
+async function getAwakeningQuest(filter) {
+    try {
+        const [awakening] = await db('heroes as h')
+            .where(filter)
+            .join('awakening_quests as aq', 'aq.hero_id', 'h.id')
+            .select('aq.awakened')
+
+        awakening.awakened ? awakening.awakened = true : awakening.awakened = false
+
+        return awakening
+    }
+    catch (error) {
+        throw error
+    }
 }
-
-function findById(id) {
-    return db('heroes').where({ id }).first()
-}
-
-//UPDATE
-
-//DELETE
