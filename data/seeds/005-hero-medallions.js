@@ -5,10 +5,10 @@ exports.seed = function (knex) {
     .then(function () {
       // Inserts seed entries
       return knex('hero_medallions').insert([
-        /* {
+        {
           hero_id: 1,
           medallion_id: 1
-        } */
+        }
       ]);
     });
 };

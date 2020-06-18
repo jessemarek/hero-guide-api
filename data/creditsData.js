@@ -1,15 +1,15 @@
 module.exports = {
-    moon_moon: {
+    /* moon_moon: {
         name: 'Moon Moon',
         img_url: '/assets/images/hero-cards-skins/kong-monkey-emperor.jpg',
         guild: 'Ouroboros'
-    },
-    agentz: {
+    }, */
+    /* agentz: {
         name: 'AgentZ',
         img_url: '/assets/images/hero-cards-aw/vulko-aw.jpg',
         guild: 'Legendary'
-    },
-    modblot: {
+    }, */
+    /* modblot: {
         name: 'Modblot',
         img_url: '/assets/images/hero-cards-aw/solomon-aw.jpg',
         guild: 'HELLDIVERS'
@@ -18,8 +18,8 @@ module.exports = {
         name: 'TheSentinel',
         img_url: '/assets/images/hero-cards-skins/magnus-arctic-warfare.jpg',
         guild: 'HELLDIVERS'
-    },
-    floppybeef: {
+    }, */
+    /* floppybeef: {
         name: 'floppybeef',
         img_url: '/assets/images/hero-cards-aw/dr-zeno-aw.jpg',
         guild: 'Ascension'
@@ -93,7 +93,7 @@ module.exports = {
         name: 'Einherjar',
         img_url: '/assets/images/hero-cards-aw/goram-aw.jpg',
         guild: 'Snipers Inc.'
-    },
+    }, */
     dremorz: {
         name: 'Dremorz',
         img_url: '/assets/images/hero-cards-aw/konrad-aw.jpg',

@@ -21,9 +21,17 @@ async function add(hero) {
 }
 
 //READ
-function find() {
-    return db('heroes as h')
-        .select('h.name', 'h.position', 'h.first_appeared', 'h.available_in')
+async function find() {
+    try {
+        const heroes = await db('heroes as h')
+            .join('awakening_quests as aq', 'aq.hero_id', 'h.id')
+            .select('h.name', 'h.position', 'h.first_appeared', 'h.available_in', 'aq.awakened')
+
+        return heroes.map(h => h.awakened ? { ...h, awakened: true } : { ...h, awakened: false })
+    }
+    catch (error) {
+        throw error
+    }
 }
 
 async function findBy(filter) {

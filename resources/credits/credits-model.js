@@ -20,8 +20,14 @@ async function add(member) {
 }
 
 //READ
-function find() {
-    return db('credits')
+async function find() {
+    const memberKeys = await db('credits').select('member_key').orderBy('id')
+    const members = await db('credits').select('member_name', 'avatar', 'guild').orderBy('id')
+    const memberList = {}
+
+    memberKeys.forEach((key, idx) => memberList[key.member_key] = members[idx])
+
+    return memberList
 }
 
 function findBy(filter) {
