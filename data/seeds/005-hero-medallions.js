@@ -6,7 +6,7 @@ exports.seed = function (knex) {
       // Inserts seed entries
       return knex('hero_medallions').insert([
         {
-          hero_id: 1,
+          hero_id: 4,
           medallion_id: 1
         }
       ]);

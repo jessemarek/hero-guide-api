@@ -13,7 +13,7 @@ exports.seed = function (knex) {
           hero_id: 2,
           awakened: false
         },
-        /* {
+        {
           hero_id: 3,
           awakened: false
         },
@@ -28,7 +28,7 @@ exports.seed = function (knex) {
         {
           hero_id: 6,
           awakened: false
-        } */
+        }
       ]);
     });
 };
