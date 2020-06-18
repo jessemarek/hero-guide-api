@@ -1,3 +1,5 @@
+//Database connection
+const Heroes = require('./heroes-model')
 
 module.exports = {
     validateHero
