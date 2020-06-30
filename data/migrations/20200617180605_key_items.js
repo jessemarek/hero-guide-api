@@ -13,6 +13,9 @@ exports.up = function (knex) {
                 .references('heroes.id')
                 .onDelete('RESTRICT')
                 .onUpdate('CASCADE')
+
+            tbl.string('item', 128).notNullable().defaultsTo('unknown')
+            tbl.integer('quantity').notNullable().unsigned().defaultsTo(0)
         })
 };
 

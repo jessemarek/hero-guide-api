@@ -21,6 +21,8 @@ async function add(hero) {
 }
 
 //READ
+
+//returns a list of all heroes with basic info needed for the hero menus
 async function find() {
     try {
         const heroes = await db('heroes as h')
@@ -34,18 +36,21 @@ async function find() {
     }
 }
 
+//returns a detailed object with all relevant info needed for a specific hero's guide
 function findBy(filter) {
     return Promise.all([
 
         getHeroInfo(filter),
         getFusionItems(filter),
+        getKeyItems(filter),
         getAwakeningQuest(filter)
     ])
         .then(data => {
             return {
                 hero_info: data[0],
                 fusion_items: data[1],
-                awakening: data[2]
+                key_items: data[2],
+                awakening: data[3]
             }
         })
         .catch(error => error)
@@ -64,6 +69,8 @@ function findById(id) {
 //DELETE
 
 //Helper functions to gather all data for a specific Hero Guide
+
+/*********************************** HERO INFO ************************************/
 async function getHeroInfo(filter) {
     try {
         const [heroInfo] = await db('heroes')
@@ -95,6 +102,7 @@ async function getHeroInfo(filter) {
     }
 }
 
+/*********************************** FUSION ITEMS ************************************/
 async function getFusionItems(filter) {
     try {
         const purple = Object.values(await getFusionColor('purple', filter))
@@ -130,6 +138,15 @@ function getFusionColor(fusion, filter) {
         .first()
 }
 
+/************************************** KEY ITEMS ***************************************/
+function getKeyItems(filter) {
+    return db('heroes as h')
+        .where(filter)
+        .join('key_items as ki', 'ki.hero_id', 'h.id')
+        .select('ki.item', 'ki.quantity')
+}
+
+/*********************************** AWAKENING QUEST ************************************/
 async function getAwakeningQuest(filter) {
     try {
         const [awakening] = await db('heroes as h')
