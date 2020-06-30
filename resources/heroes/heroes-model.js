@@ -97,14 +97,14 @@ async function getHeroInfo(filter) {
 
 async function getFusionItems(filter) {
     try {
-        const purple = await getFusionColor('purple', filter)
-        const purple1 = await getFusionColor('purple_1', filter)
-        const purple2 = await getFusionColor('purple_2', filter)
-        const purple3 = await getFusionColor('purple_3', filter)
-        const purple4 = await getFusionColor('purple_4', filter)
-        const orange = await getFusionColor('orange', filter)
-        const orange1 = await getFusionColor('orange_1', filter)
-        const orange2 = await getFusionColor('orange_2', filter)
+        const purple = Object.values(await getFusionColor('purple', filter))
+        const purple1 = Object.values(await getFusionColor('purple_1', filter))
+        const purple2 = Object.values(await getFusionColor('purple_2', filter))
+        const purple3 = Object.values(await getFusionColor('purple_3', filter))
+        const purple4 = Object.values(await getFusionColor('purple_4', filter))
+        const orange = Object.values(await getFusionColor('orange', filter))
+        const orange1 = Object.values(await getFusionColor('orange_1', filter))
+        const orange2 = Object.values(await getFusionColor('orange_2', filter))
 
         return {
             purple,
@@ -127,6 +127,7 @@ function getFusionColor(fusion, filter) {
         .where(filter)
         .join(`${fusion} as f`, 'f.hero_id', 'h.id')
         .select('f.slot_1', 'f.slot_2', 'f.slot_3', 'f.slot_4', 'f.slot_5', 'f.slot_6')
+        .first()
 }
 
 async function getAwakeningQuest(filter) {
