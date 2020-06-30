@@ -17,18 +17,19 @@ router.get('/', (req, res) => {
             }
         })
         .catch(error => {
-            res.status(500).json({ message: error.message })
+            res.status(500).json({ error: error.message })
         })
 })
 
 router.get('/:hero', validateHero, (req, res) => {
     const { hero } = req.params
+
     Heroes.findBy({ name: hero })
         .then(hero => {
             res.status(200).json(hero)
         })
         .catch(error => {
-            res.status(500).json({ message: error.message })
+            res.status(500).json({ error: error.message })
         })
 })
 
