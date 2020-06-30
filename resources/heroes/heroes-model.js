@@ -38,12 +38,14 @@ function findBy(filter) {
     return Promise.all([
 
         getHeroInfo(filter),
+        getFusionItems(filter),
         getAwakeningQuest(filter)
     ])
         .then(data => {
             return {
                 hero_info: data[0],
-                awakening: data[1]
+                fusion_items: data[1],
+                awakening: data[2]
             }
         })
         .catch(error => error)
@@ -91,6 +93,40 @@ async function getHeroInfo(filter) {
     catch (error) {
         throw error
     }
+}
+
+async function getFusionItems(filter) {
+    try {
+        const purple = await getFusionColor('purple', filter)
+        const purple1 = await getFusionColor('purple_1', filter)
+        const purple2 = await getFusionColor('purple_2', filter)
+        const purple3 = await getFusionColor('purple_3', filter)
+        const purple4 = await getFusionColor('purple_4', filter)
+        const orange = await getFusionColor('orange', filter)
+        const orange1 = await getFusionColor('orange_1', filter)
+        const orange2 = await getFusionColor('orange_2', filter)
+
+        return {
+            purple,
+            purple1,
+            purple2,
+            purple3,
+            purple4,
+            orange,
+            orange1,
+            orange2
+        }
+    }
+    catch (error) {
+        throw error
+    }
+}
+
+function getFusionColor(fusion, filter) {
+    return db('heroes as h')
+        .where(filter)
+        .join(`${fusion} as f`, 'f.hero_id', 'h.id')
+        .select('f.slot_1', 'f.slot_2', 'f.slot_3', 'f.slot_4', 'f.slot_5', 'f.slot_6')
 }
 
 async function getAwakeningQuest(filter) {
