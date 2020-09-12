@@ -34,21 +34,21 @@ exports.seed = function (knex) {
         },
         {
           hero_id: 4,
-          slot_1: '',
-          slot_2: '',
-          slot_3: '',
-          slot_4: '',
-          slot_5: '',
-          slot_6: ''
+          slot_1: 'frozen-teardrop',
+          slot_2: 'chain-pendant',
+          slot_3: 'shuriken',
+          slot_4: 'athena\'s-blessing',
+          slot_5: 'voodoo-manuscript',
+          slot_6: 'ice-smasher'
         },
         {
           hero_id: 5,
-          slot_1: '',
-          slot_2: '',
-          slot_3: '',
-          slot_4: '',
-          slot_5: '',
-          slot_6: ''
+          slot_1: 'heavy-ballista',
+          slot_2: 'butterfly-swords',
+          slot_3: 'spartan-dagger',
+          slot_4: 'light-battleaxe',
+          slot_5: 'doomsday-blade',
+          slot_6: 'destruction'
         },
         {
           hero_id: 6,

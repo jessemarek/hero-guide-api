@@ -34,21 +34,21 @@ exports.seed = function (knex) {
         },
         {
           hero_id: 4,
-          slot_1: '',
-          slot_2: '',
-          slot_3: '',
-          slot_4: '',
-          slot_5: '',
-          slot_6: ''
+          slot_1: 'elvish-etude',
+          slot_2: 'wellspring-water',
+          slot_3: 'sage-wand',
+          slot_4: 'stealth-cape',
+          slot_5: 'clasp-of-life',
+          slot_6: 'luna\'s-boots'
         },
         {
           hero_id: 5,
-          slot_1: '',
-          slot_2: '',
-          slot_3: '',
-          slot_4: '',
-          slot_5: '',
-          slot_6: ''
+          slot_1: 'grim-slasher',
+          slot_2: 'demolisher',
+          slot_3: 'destruction',
+          slot_4: 'heavy-club',
+          slot_5: 'scorching-spear',
+          slot_6: 'banshee-essence'
         },
         {
           hero_id: 6,

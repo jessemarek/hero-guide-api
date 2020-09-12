@@ -34,21 +34,21 @@ exports.seed = function (knex) {
         },
         {
           hero_id: 4,
-          slot_1: '',
-          slot_2: '',
-          slot_3: '',
-          slot_4: '',
-          slot_5: '',
-          slot_6: ''
+          slot_1: 'phantom-jar',
+          slot_2: 'explosive-scepter',
+          slot_3: 'crystal-staff',
+          slot_4: 'runic-eulogy',
+          slot_5: 'ritual-blade',
+          slot_6: 'legendary-gemstone'
         },
         {
           hero_id: 5,
-          slot_1: '',
-          slot_2: '',
-          slot_3: '',
-          slot_4: '',
-          slot_5: '',
-          slot_6: ''
+          slot_1: 'tribal-battleaxe',
+          slot_2: 'ancient-royal-sword',
+          slot_3: 'clasp-of-life',
+          slot_4: 'charger-boots',
+          slot_5: 'luna\'s-boots',
+          slot_6: 'broadsword'
         },
         {
           hero_id: 6,

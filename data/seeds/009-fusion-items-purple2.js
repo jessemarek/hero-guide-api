@@ -34,21 +34,21 @@ exports.seed = function (knex) {
         },
         {
           hero_id: 4,
-          slot_1: '',
-          slot_2: '',
-          slot_3: '',
-          slot_4: '',
-          slot_5: '',
-          slot_6: ''
+          slot_1: 'grand-staff',
+          slot_2: 'scepter-of-the-abyss',
+          slot_3: 'scepter-of-time',
+          slot_4: 'tri-spirit-orb',
+          slot_5: 'lilith-staff',
+          slot_6: 'crystal-staff'
         },
         {
           hero_id: 5,
-          slot_1: '',
-          slot_2: '',
-          slot_3: '',
-          slot_4: '',
-          slot_5: '',
-          slot_6: ''
+          slot_1: 'pride\'s-protector',
+          slot_2: 'adamantite-scimitar',
+          slot_3: 'doomsday-blade',
+          slot_4: 'runic-crystal-ball',
+          slot_5: 'demolisher',
+          slot_6: 'scorching-spear'
         },
         {
           hero_id: 6,

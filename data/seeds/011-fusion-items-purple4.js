@@ -34,21 +34,21 @@ exports.seed = function (knex) {
         },
         {
           hero_id: 4,
-          slot_1: '',
-          slot_2: '',
-          slot_3: '',
-          slot_4: '',
-          slot_5: '',
-          slot_6: ''
+          slot_1: 'angel\'s-wings',
+          slot_2: 'torch-of-destruction',
+          slot_3: 'midnight-dream',
+          slot_4: 'chain-pendant',
+          slot_5: 'healing-stone',
+          slot_6: 'adamantite-scimitar'
         },
         {
           hero_id: 5,
-          slot_1: '',
-          slot_2: '',
-          slot_3: '',
-          slot_4: '',
-          slot_5: '',
-          slot_6: ''
+          slot_1: 'titanic-axe',
+          slot_2: 'poseidon\'s-trident',
+          slot_3: 'blade-of-chaos',
+          slot_4: 'goblin\'s-scimitar',
+          slot_5: 'whisperwind-bow',
+          slot_6: 'eye-of-death'
         },
         {
           hero_id: 6,
