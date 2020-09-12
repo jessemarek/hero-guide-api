@@ -145,7 +145,6 @@ exports.seed = function (knex) {
           item: 'nemean-hide',
           quantity: 1
         },
-
         {
           hero_id: 2,
           item: 'ethereal-cloak',
@@ -161,7 +160,6 @@ exports.seed = function (knex) {
           item: 'healing-stone',
           quantity: 3
         },
-
         {
           hero_id: 2,
           item: 'destruction',
@@ -417,7 +415,6 @@ exports.seed = function (knex) {
           item: 'nemean-hide',
           quantity: 1
         },
-
         {
           hero_id: 5,
           item: 'ancient-royal-sword',
@@ -433,7 +430,6 @@ exports.seed = function (knex) {
           item: 'spartan-dagger',
           quantity: 5
         },
-
         {
           hero_id: 5,
           item: 'grim-slasher',
@@ -457,6 +453,96 @@ exports.seed = function (knex) {
         {
           hero_id: 5,
           item: 'clasp-of-life',
+          quantity: 1
+        },
+        {
+          hero_id: 6,
+          item: 'scepter-of-truth',
+          quantity: 5
+        },
+        {
+          hero_id: 6,
+          item: 'oracle\'s-robe',
+          quantity: 3
+        },
+        {
+          hero_id: 6,
+          item: 'primordial-stone',
+          quantity: 2
+        },
+        {
+          hero_id: 6,
+          item: 'staff-of-illumination',
+          quantity: 2
+        },
+        {
+          hero_id: 6,
+          item: 'lost-epic',
+          quantity: 1
+        },
+        {
+          hero_id: 6,
+          item: 'kretonian-talisman',
+          quantity: 1
+        },
+        {
+          hero_id: 6,
+          item: 'torch-of-destruction',
+          quantity: 5
+        },
+        {
+          hero_id: 6,
+          item: 'helmet-of-darkness',
+          quantity: 2
+        },
+        {
+          hero_id: 6,
+          item: 'ethereal-cloak',
+          quantity: 1
+        },
+        {
+          hero_id: 6,
+          item: 'sage-wand',
+          quantity: 8
+        },
+        {
+          hero_id: 6,
+          item: 'shuriken',
+          quantity: 7
+        },
+        {
+          hero_id: 6,
+          item: 'crystal-staff',
+          quantity: 4
+        },
+        {
+          hero_id: 6,
+          item: 'ghostly-mantle',
+          quantity: 2
+        },
+        {
+          hero_id: 6,
+          item: 'scepter-of-the-abyss',
+          quantity: 2
+        },
+        {
+          hero_id: 6,
+          item: 'phantom-jar',
+          quantity: 2
+        },
+        {
+          hero_id: 6,
+          item: 'wellspring-water',
+          quantity: 2
+        },
+        {
+          hero_id: 6,
+          item: 'doomsday-armor',
+          quantity: 1
+        },
+        {
+          hero_id: 6,
+          item: 'sapphire-bracelet',
           quantity: 1
         },
       ]);

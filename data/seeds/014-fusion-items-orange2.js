@@ -53,11 +53,11 @@ exports.seed = function (knex) {
         {
           hero_id: 6,
           slot_1: 'unknown',
-          slot_2: '',
-          slot_3: '',
-          slot_4: '',
-          slot_5: '',
-          slot_6: ''
+          slot_2: 'crescent-staff',
+          slot_3: 'cloak-of-wisdom',
+          slot_4: 'oracle\'s-robe',
+          slot_5: 'priestly-scepter',
+          slot_6: 'angelic-fan'
         }
       ]);
     });

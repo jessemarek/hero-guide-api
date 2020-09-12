@@ -52,12 +52,12 @@ exports.seed = function (knex) {
         },
         {
           hero_id: 6,
-          slot_1: '',
-          slot_2: '',
-          slot_3: '',
-          slot_4: '',
-          slot_5: '',
-          slot_6: ''
+          slot_1: 'grand-staff',
+          slot_2: 'doomsday-armor',
+          slot_3: 'voodoo-manuscript',
+          slot_4: 'tri-spirit-orb',
+          slot_5: 'fire-ruby',
+          slot_6: 'phantom-jar'
         }
       ]);
     });

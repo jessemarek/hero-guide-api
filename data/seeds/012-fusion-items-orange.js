@@ -53,11 +53,11 @@ exports.seed = function (knex) {
         {
           hero_id: 6,
           slot_1: 'unknown',
-          slot_2: '',
-          slot_3: '',
-          slot_4: '',
-          slot_5: '',
-          slot_6: ''
+          slot_2: 'caduceus',
+          slot_3: 'victory\'s-scepter',
+          slot_4: 'thunderbolt',
+          slot_5: 'torch-of-destruction',
+          slot_6: 'art-of-war'
         }
       ]);
     });

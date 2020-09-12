@@ -52,12 +52,12 @@ exports.seed = function (knex) {
         },
         {
           hero_id: 6,
-          slot_1: '',
-          slot_2: '',
-          slot_3: '',
-          slot_4: '',
-          slot_5: '',
-          slot_6: ''
+          slot_1: 'heavy-club',
+          slot_2: 'carnage-mallet',
+          slot_3: 'ancient-royal-sword',
+          slot_4: 'gem-of-vigor',
+          slot_5: 'chipped-blade',
+          slot_6: 'broadsword'
         }
       ]);
     });

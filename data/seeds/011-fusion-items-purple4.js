@@ -52,12 +52,12 @@ exports.seed = function (knex) {
         },
         {
           hero_id: 6,
-          slot_1: '',
-          slot_2: '',
-          slot_3: '',
-          slot_4: '',
-          slot_5: '',
-          slot_6: ''
+          slot_1: 'thunderbolt',
+          slot_2: 'sword-of-olympus',
+          slot_3: 'midnight-dream',
+          slot_4: 'dark-wizard\'s-figurine',
+          slot_5: 'shuriken',
+          slot_6: 'grand-staff'
         }
       ]);
     });

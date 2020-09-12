@@ -52,12 +52,12 @@ exports.seed = function (knex) {
         },
         {
           hero_id: 6,
-          slot_1: '',
-          slot_2: '',
-          slot_3: '',
-          slot_4: '',
-          slot_5: '',
-          slot_6: ''
+          slot_1: 'frozen-teardrop',
+          slot_2: 'chain-pendant',
+          slot_3: 'shuriken',
+          slot_4: 'athena\'s-blessing',
+          slot_5: 'scepter-of-the-abyss',
+          slot_6: 'lilith-staff'
         }
       ]);
     });

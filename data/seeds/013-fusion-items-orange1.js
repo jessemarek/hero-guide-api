@@ -53,11 +53,11 @@ exports.seed = function (knex) {
         {
           hero_id: 6,
           slot_1: 'unknown',
-          slot_2: '',
-          slot_3: '',
-          slot_4: '',
-          slot_5: '',
-          slot_6: ''
+          slot_2: 'transforming-mask',
+          slot_3: 'jewel-of-helios',
+          slot_4: 'scepter-of-truth',
+          slot_5: 'book-of-mysteries',
+          slot_6: 'helmet-of-darkness'
         }
       ]);
     });
