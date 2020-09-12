@@ -43,6 +43,7 @@ function findBy(filter) {
         getHeroInfo(filter),
         getFusionItems(filter),
         getKeyItems(filter),
+        getHeroTrees(filter),
         getAwakeningQuest(filter)
     ])
         .then(data => {
@@ -50,7 +51,8 @@ function findBy(filter) {
                 hero_info: data[0],
                 fusion_items: data[1],
                 key_items: data[2],
-                awakening: data[3]
+                academy_trees: data[3],
+                awakening: data[4]
             }
         })
         .catch(error => error)
@@ -144,6 +146,17 @@ function getKeyItems(filter) {
         .where(filter)
         .join('key_items as ki', 'ki.hero_id', 'h.id')
         .select('ki.item', 'ki.quantity')
+}
+
+/************************************ ACADEMY TREES *************************************/
+async function getHeroTrees(filter) {
+    const trees = await db('heroes as h')
+        .where(filter)
+        .join('hero_trees as ht', 'ht.hero_id', 'h.id')
+        .join('academy_trees as at', 'at.id', 'ht.tree_id')
+        .select('at.tree_name')
+
+    return trees.map(tree => tree["tree_name"])
 }
 
 /*********************************** AWAKENING QUEST ************************************/
