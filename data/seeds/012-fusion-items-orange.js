@@ -17,20 +17,20 @@ exports.seed = function (knex) {
         {
           hero_id: 2,
           slot_1: 'unknown',
-          slot_2: '',
-          slot_3: '',
-          slot_4: '',
-          slot_5: '',
-          slot_6: ''
+          slot_2: 'armor-of-shadows',
+          slot_3: 'mystic-dragonscale',
+          slot_4: 'titanic-axe',
+          slot_5: 'demon\'s-skull',
+          slot_6: 'maiden\'s-trinket'
         },
         {
           hero_id: 3,
           slot_1: 'unknown',
-          slot_2: '',
-          slot_3: '',
-          slot_4: '',
-          slot_5: '',
-          slot_6: ''
+          slot_2: 'caduceus',
+          slot_3: 'book-of-mysteries',
+          slot_4: 'victory\'s-scepter',
+          slot_5: 'midnight-dream',
+          slot_6: 'chain-pendant'
         },
         {
           hero_id: 4,

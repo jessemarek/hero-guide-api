@@ -16,21 +16,21 @@ exports.seed = function (knex) {
         },
         {
           hero_id: 2,
-          slot_1: '',
-          slot_2: '',
-          slot_3: '',
-          slot_4: '',
-          slot_5: '',
-          slot_6: ''
+          slot_1: 'goblin\'s-scimitar',
+          slot_2: 'healing-stone',
+          slot_3: 'azrael\'s-roar',
+          slot_4: 'eye-of-death',
+          slot_5: 'doomsday-blade',
+          slot_6: 'destruction'
         },
         {
           hero_id: 3,
-          slot_1: '',
-          slot_2: '',
-          slot_3: '',
-          slot_4: '',
-          slot_5: '',
-          slot_6: ''
+          slot_1: 'frozen-teardrop',
+          slot_2: 'art-of-war',
+          slot_3: 'shuriken',
+          slot_4: 'scepter-of-time',
+          slot_5: 'voodoo-manuscript',
+          slot_6: 'lilith-staff'
         },
         {
           hero_id: 4,

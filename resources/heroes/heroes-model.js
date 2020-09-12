@@ -104,6 +104,11 @@ async function getHeroInfo(filter) {
     }
 }
 
+/************************************** KEY ITEMS ***************************************/
+function getAbilities(filter) {
+
+}
+
 /*********************************** FUSION ITEMS ************************************/
 async function getFusionItems(filter) {
     try {
@@ -150,13 +155,18 @@ function getKeyItems(filter) {
 
 /************************************ ACADEMY TREES *************************************/
 async function getHeroTrees(filter) {
-    const trees = await db('heroes as h')
-        .where(filter)
-        .join('hero_trees as ht', 'ht.hero_id', 'h.id')
-        .join('academy_trees as at', 'at.id', 'ht.tree_id')
-        .select('at.tree_name')
+    try {
+        const trees = await db('heroes as h')
+            .where(filter)
+            .join('hero_trees as ht', 'ht.hero_id', 'h.id')
+            .join('academy_trees as at', 'at.id', 'ht.tree_id')
+            .select('at.tree_name')
 
-    return trees.map(tree => tree["tree_name"])
+        return trees.map(tree => tree["tree_name"])
+    }
+    catch (error) {
+        throw error
+    }
 }
 
 /*********************************** AWAKENING QUEST ************************************/

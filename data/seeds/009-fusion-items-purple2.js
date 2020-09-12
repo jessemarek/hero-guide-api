@@ -16,21 +16,21 @@ exports.seed = function (knex) {
         },
         {
           hero_id: 2,
-          slot_1: '',
-          slot_2: '',
-          slot_3: '',
-          slot_4: '',
-          slot_5: '',
-          slot_6: ''
+          slot_1: 'conqueror\'s-chestplate',
+          slot_2: 'doomsday-blade',
+          slot_3: 'cap-of-souls',
+          slot_4: 'runic-crystal-ball',
+          slot_5: 'ice-smasher',
+          slot_6: 'sapphire-bracelet'
         },
         {
           hero_id: 3,
-          slot_1: '',
-          slot_2: '',
-          slot_3: '',
-          slot_4: '',
-          slot_5: '',
-          slot_6: ''
+          slot_1: 'conqueror\'s-chestplate',
+          slot_2: 'scepter-of-the-abyss',
+          slot_3: 'voodoo-manuscript',
+          slot_4: 'tri-spirit-orb',
+          slot_5: 'fire-ruby',
+          slot_6: 'phantom-jar'
         },
         {
           hero_id: 4,

@@ -17,20 +17,20 @@ exports.seed = function (knex) {
         {
           hero_id: 2,
           slot_1: 'unknown',
-          slot_2: '',
-          slot_3: '',
-          slot_4: '',
-          slot_5: '',
-          slot_6: ''
+          slot_2: 'renegade\'s-armor',
+          slot_3: 'beastly-guardian',
+          slot_4: 'commander\'s-blade',
+          slot_5: 'underworld-saber',
+          slot_6: 'blade-of-cataclysm'
         },
         {
           hero_id: 3,
           slot_1: 'unknown',
-          slot_2: '',
-          slot_3: '',
-          slot_4: '',
-          slot_5: '',
-          slot_6: ''
+          slot_2: 'priestly-scepter',
+          slot_3: 'angelic-fan',
+          slot_4: 'staff-of-illumination',
+          slot_5: 'jewel-of-helios',
+          slot_6: 'victory\'s-scepter'
         },
         {
           hero_id: 4,
