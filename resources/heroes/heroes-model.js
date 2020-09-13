@@ -175,9 +175,53 @@ async function getAwakeningQuest(filter) {
         const [awakening] = await db('heroes as h')
             .where(filter)
             .join('awakening_quests as aq', 'aq.hero_id', 'h.id')
-            .select('aq.awakened')
+            .select('aq.awakened', 'aq.quote', 'aq.sig_item')
+
+        const [quest1] = await db('heroes as h')
+            .where(filter)
+            .join('awakening_quests as aq', 'aq.hero_id', 'h.id')
+            .join('quest_1 as q1', 'q1.awakening_id', 'aq.id')
+            .select('chapter', 'fragment')
+
+        const [recipe] = await db('heroes as h')
+            .where(filter)
+            .join('awakening_quests as aq', 'aq.hero_id', 'h.id')
+            .join('quest_1 as q1', 'q1.awakening_id', 'aq.id')
+            .select('item_1', 'item_2', 'item_3')
+
+        quest1.recipe = Object.values(recipe)
+
+        const [quest2] = await db('heroes as h')
+            .where(filter)
+            .join('awakening_quests as aq', 'aq.hero_id', 'h.id')
+            .join('quest_2 as q2', 'q2.awakening_id', 'aq.id')
+            .select('trial_name', 'trial_icon', 'completions')
+
+        const [quest3] = await db('heroes as h')
+            .where(filter)
+            .join('awakening_quests as aq', 'aq.hero_id', 'h.id')
+            .join('quest_3 as q3', 'q3.awakening_id', 'aq.id')
+            .select('chapter', 'requirement')
+
+        const stats = await db('heroes as h')
+            .where(filter)
+            .join('awakening_quests as aq', 'aq.hero_id', 'h.id')
+            .join('sig_stats as ss', 'ss.awakening_id', 'aq.id')
+            .select('stat', 'value', 'enchant')
+
+        const forge = await db('heroes as h')
+            .where(filter)
+            .join('awakening_quests as aq', 'aq.hero_id', 'h.id')
+            .join('forge_bonus as fb', 'fb.awakening_id', 'aq.id')
+            .select('stat', 'bonus', 'value')
+
 
         awakening.awakened ? awakening.awakened = true : awakening.awakened = false
+        awakening.quest_1 = quest1
+        awakening.quest_2 = quest2
+        awakening.quest_3 = quest3
+        awakening.sig_stats = stats
+        awakening.forge_bonus = forge
 
         return awakening
     }
