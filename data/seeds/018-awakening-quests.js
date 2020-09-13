@@ -7,7 +7,9 @@ exports.seed = function (knex) {
       return knex('awakening_quests').insert([
         {
           hero_id: 1,
-          awakened: true
+          awakened: true,
+          quote: 'My blade never betrays me!',
+          sig_item: 'dragon-spaulders'
         },
         {
           hero_id: 2,
