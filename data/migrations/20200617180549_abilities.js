@@ -28,7 +28,7 @@ exports.up = function (knex) {
             tbl.integer('ability_id')
                 .notNullable()
                 .unsigned()
-                .references('heroes.id')
+                .references('abilities.id')
                 .onDelete('RESTRICT')
                 .onUpdate('CASCADE')
         })

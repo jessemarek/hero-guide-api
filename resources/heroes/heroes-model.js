@@ -41,6 +41,7 @@ function findBy(filter) {
     return Promise.all([
 
         getHeroInfo(filter),
+        getAbilities(filter),
         getFusionItems(filter),
         getKeyItems(filter),
         getHeroTrees(filter),
@@ -49,10 +50,11 @@ function findBy(filter) {
         .then(data => {
             return {
                 hero_info: data[0],
-                fusion_items: data[1],
-                key_items: data[2],
-                academy_trees: data[3],
-                awakening: data[4]
+                abilities: data[1],
+                fusion_items: data[2],
+                key_items: data[3],
+                academy_trees: data[4],
+                awakening: data[5]
             }
         })
         .catch(error => error)
@@ -105,7 +107,28 @@ async function getHeroInfo(filter) {
 }
 
 /************************************** KEY ITEMS ***************************************/
-function getAbilities(filter) {
+async function getAbilities(filter) {
+    try {
+        const abilities = await db('heroes as h')
+            .where('h.name', filter.name)
+            .join('abilities as a', 'a.hero_id', 'h.id')
+            .select('a.id', 'a.name', 'a.description', 'a.attributes')
+
+        abilities.forEach(async ability => {
+            const stats = await db('abilities as a').where('a.id', ability.id).join('ability_stats as s', 's.ability_id', 'a.id').select('s.stat_details')
+
+            //convert the stat details into an array of strings instead of an array of objects
+            ability.stats = stats.map(s => s.stat_details)
+
+            //remove the ability id since we don't need it anymore
+            delete ability.id
+        })
+
+        return abilities
+    }
+    catch (error) {
+        throw error
+    }
 
 }
 
