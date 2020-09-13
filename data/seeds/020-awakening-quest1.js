@@ -12,7 +12,47 @@ exports.seed = function (knex) {
           item_2: 'mystic-dragonscale',
           item_3: 'destruction',
           awakening_id: 1
-        }
+        },
+        {
+          chapter: 'none',
+          fragment: 'none',
+          item_1: 'none',
+          item_2: 'none',
+          item_3: 'none',
+          awakening_id: 2
+        },
+        {
+          chapter: 'none',
+          fragment: 'none',
+          item_1: 'none',
+          item_2: 'none',
+          item_3: 'none',
+          awakening_id: 3
+        },
+        {
+          chapter: 'none',
+          fragment: 'none',
+          item_1: 'none',
+          item_2: 'none',
+          item_3: 'none',
+          awakening_id: 4
+        },
+        {
+          chapter: 'none',
+          fragment: 'none',
+          item_1: 'none',
+          item_2: 'none',
+          item_3: 'none',
+          awakening_id: 5
+        },
+        {
+          chapter: 'none',
+          fragment: 'none',
+          item_1: 'none',
+          item_2: 'none',
+          item_3: 'none',
+          awakening_id: 6
+        },
       ]);
     });
 };

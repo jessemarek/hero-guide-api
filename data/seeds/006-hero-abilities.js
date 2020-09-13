@@ -35,6 +35,138 @@ exports.seed = function (knex) {
           attributes: 'none',
           hero_id: 1
         },
+        {
+          name: 'x',
+          description: 'x',
+          attributes: 'x',
+          hero_id: 2
+        },
+        {
+          name: 'x',
+          description: 'x',
+          attributes: 'x',
+          hero_id: 2
+        },
+        {
+          name: 'x',
+          description: 'x',
+          attributes: 'x',
+          hero_id: 2
+        },
+        {
+          name: 'x',
+          description: 'x',
+          attributes: 'x',
+          hero_id: 2
+        },
+        {
+          name: 'x',
+          description: 'x',
+          attributes: 'x',
+          hero_id: 3
+        },
+        {
+          name: 'x',
+          description: 'x',
+          attributes: 'x',
+          hero_id: 3
+        },
+        {
+          name: 'x',
+          description: 'x',
+          attributes: 'x',
+          hero_id: 3
+        },
+        {
+          name: 'x',
+          description: 'x',
+          attributes: 'x',
+          hero_id: 3
+        },
+        {
+          name: 'x',
+          description: 'x',
+          attributes: 'x',
+          hero_id: 4
+        },
+        {
+          name: 'x',
+          description: 'x',
+          attributes: 'x',
+          hero_id: 4
+        },
+        {
+          name: 'x',
+          description: 'x',
+          attributes: 'x',
+          hero_id: 4
+        },
+        {
+          name: 'x',
+          description: 'x',
+          attributes: 'x',
+          hero_id: 4
+        },
+        {
+          name: 'x',
+          description: 'x',
+          attributes: 'x',
+          hero_id: 4
+        },
+        {
+          name: 'x',
+          description: 'x',
+          attributes: 'x',
+          hero_id: 5
+        },
+        {
+          name: 'x',
+          description: 'x',
+          attributes: 'x',
+          hero_id: 5
+        },
+        {
+          name: 'x',
+          description: 'x',
+          attributes: 'x',
+          hero_id: 5
+        },
+        {
+          name: 'x',
+          description: 'x',
+          attributes: 'x',
+          hero_id: 5
+        },
+        {
+          name: 'x',
+          description: 'x',
+          attributes: 'x',
+          hero_id: 5
+        },
+        {
+          name: 'x',
+          description: 'x',
+          attributes: 'x',
+          hero_id: 6
+        },
+        {
+          name: 'x',
+          description: 'x',
+          attributes: 'x',
+          hero_id: 6
+        },
+        {
+          name: 'x',
+          description: 'x',
+          attributes: 'x',
+          hero_id: 6
+        },
+        {
+          name: 'x',
+          description: 'x',
+          attributes: 'x',
+          hero_id: 6
+        },
       ]);
     });
 };

@@ -29,6 +29,36 @@ exports.seed = function (knex) {
           enchant: 14,
           awakening_id: 1
         },
+        {
+          stat: 'none',
+          value: 0,
+          enchant: 0,
+          awakening_id: 2
+        },
+        {
+          stat: 'none',
+          value: 0,
+          enchant: 0,
+          awakening_id: 3
+        },
+        {
+          stat: 'none',
+          value: 0,
+          enchant: 0,
+          awakening_id: 4
+        },
+        {
+          stat: 'none',
+          value: 0,
+          enchant: 0,
+          awakening_id: 5
+        },
+        {
+          stat: 'none',
+          value: 0,
+          enchant: 0,
+          awakening_id: 6
+        },
       ]);
     });
 };

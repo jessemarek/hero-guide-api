@@ -10,7 +10,37 @@ exports.seed = function (knex) {
           trial_icon: 'bloody-arena',
           completions: 10,
           awakening_id: 1
-        }
+        },
+        {
+          trial_name: 'none',
+          trial_icon: 'none',
+          completions: 0,
+          awakening_id: 2
+        },
+        {
+          trial_name: 'none',
+          trial_icon: 'none',
+          completions: 0,
+          awakening_id: 3
+        },
+        {
+          trial_name: 'none',
+          trial_icon: 'none',
+          completions: 0,
+          awakening_id: 4
+        },
+        {
+          trial_name: 'none',
+          trial_icon: 'none',
+          completions: 0,
+          awakening_id: 5
+        },
+        {
+          trial_name: 'none',
+          trial_icon: 'none',
+          completions: 0,
+          awakening_id: 6
+        },
       ]);
     });
 };

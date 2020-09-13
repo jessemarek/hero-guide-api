@@ -9,7 +9,32 @@ exports.seed = function (knex) {
           chapter: 'Chapter 14 - Predator and Prey',
           requirement: 'All heroes must survive (Heroic Difficulty)',
           awakening_id: 1
-        }
+        },
+        {
+          chapter: 'none',
+          requirement: 'none',
+          awakening_id: 2
+        },
+        {
+          chapter: 'none',
+          requirement: 'none',
+          awakening_id: 3
+        },
+        {
+          chapter: 'none',
+          requirement: 'none',
+          awakening_id: 4
+        },
+        {
+          chapter: 'none',
+          requirement: 'none',
+          awakening_id: 5
+        },
+        {
+          chapter: 'none',
+          requirement: 'none',
+          awakening_id: 6
+        },
       ]);
     });
 };

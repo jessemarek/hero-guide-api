@@ -73,6 +73,94 @@ exports.seed = function (knex) {
           stat_details: 'Yellow: Reduces target\'s Energy by 250',
           ability_id: 5
         },
+        {
+          stat_details: 'x',
+          ability_id: 6
+        },
+        {
+          stat_details: 'x',
+          ability_id: 7
+        },
+        {
+          stat_details: 'x',
+          ability_id: 8
+        },
+        {
+          stat_details: 'x',
+          ability_id: 9
+        },
+        {
+          stat_details: 'x',
+          ability_id: 10
+        },
+        {
+          stat_details: 'x',
+          ability_id: 11
+        },
+        {
+          stat_details: 'x',
+          ability_id: 12
+        },
+        {
+          stat_details: 'x',
+          ability_id: 13
+        },
+        {
+          stat_details: 'x',
+          ability_id: 14
+        },
+        {
+          stat_details: 'x',
+          ability_id: 15
+        },
+        {
+          stat_details: 'x',
+          ability_id: 16
+        },
+        {
+          stat_details: 'x',
+          ability_id: 17
+        },
+        {
+          stat_details: 'x',
+          ability_id: 18
+        },
+        {
+          stat_details: 'x',
+          ability_id: 19
+        },
+        {
+          stat_details: 'x',
+          ability_id: 20
+        },
+        {
+          stat_details: 'x',
+          ability_id: 21
+        },
+        {
+          stat_details: 'x',
+          ability_id: 22
+        },
+        {
+          stat_details: 'x',
+          ability_id: 23
+        },
+        {
+          stat_details: 'x',
+          ability_id: 24
+        },
+        {
+          stat_details: 'x',
+          ability_id: 25
+        },
+        {
+          stat_details: 'x',
+          ability_id: 26
+        },
+        {
+          stat_details: 'x',
+          ability_id: 27
+        },
       ]);
     });
 };

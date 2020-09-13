@@ -13,23 +13,33 @@ exports.seed = function (knex) {
         },
         {
           hero_id: 2,
-          awakened: false
+          awakened: false,
+          quote: 'none',
+          sig_item: 'none'
         },
         {
           hero_id: 3,
-          awakened: false
+          awakened: false,
+          quote: 'none',
+          sig_item: 'none'
         },
         {
           hero_id: 4,
-          awakened: true
+          awakened: true,
+          quote: 'none',
+          sig_item: 'none'
         },
         {
           hero_id: 5,
-          awakened: true
+          awakened: true,
+          quote: 'none',
+          sig_item: 'none'
         },
         {
           hero_id: 6,
-          awakened: false
+          awakened: false,
+          quote: 'none',
+          sig_item: 'none'
         }
       ]);
     });

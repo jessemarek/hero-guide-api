@@ -22,7 +22,97 @@ exports.seed = function (knex) {
           bonus: 'm-attack',
           value: 150,
           awakening_id: 1
-        }
+        },
+        {
+          stat: 'none',
+          bonus: 'none',
+          value: 0,
+          awakening_id: 2
+        },
+        {
+          stat: 'none',
+          bonus: 'none',
+          value: 0,
+          awakening_id: 2
+        },
+        {
+          stat: 'none',
+          bonus: 'none',
+          value: 0,
+          awakening_id: 2
+        },
+        {
+          stat: 'none',
+          bonus: 'none',
+          value: 0,
+          awakening_id: 3
+        },
+        {
+          stat: 'none',
+          bonus: 'none',
+          value: 0,
+          awakening_id: 3
+        },
+        {
+          stat: 'none',
+          bonus: 'none',
+          value: 0,
+          awakening_id: 3
+        },
+        {
+          stat: 'none',
+          bonus: 'none',
+          value: 0,
+          awakening_id: 4
+        },
+        {
+          stat: 'none',
+          bonus: 'none',
+          value: 0,
+          awakening_id: 4
+        },
+        {
+          stat: 'none',
+          bonus: 'none',
+          value: 0,
+          awakening_id: 4
+        },
+        {
+          stat: 'none',
+          bonus: 'none',
+          value: 0,
+          awakening_id: 5
+        },
+        {
+          stat: 'none',
+          bonus: 'none',
+          value: 0,
+          awakening_id: 5
+        },
+        {
+          stat: 'none',
+          bonus: 'none',
+          value: 0,
+          awakening_id: 5
+        },
+        {
+          stat: 'none',
+          bonus: 'none',
+          value: 0,
+          awakening_id: 6
+        },
+        {
+          stat: 'none',
+          bonus: 'none',
+          value: 0,
+          awakening_id: 6
+        },
+        {
+          stat: 'none',
+          bonus: 'none',
+          value: 0,
+          awakening_id: 6
+        },
       ]);
     });
 };
