@@ -168,14 +168,20 @@ An API I am building to serve data to my shhg-react project.
 
 ## Endpoints
 ---
-
+#### Heroes
 | Method | Endpoint     | Description                                       |
 | ------ | ------------ | ------------------------------------------------- |
 | GET    | `api/heroes` | Returns an array of all Heroes with basic details |
 
+---
+
+#### Hero Guides
+
 | Method | Endpoint           | Description                                   |
 | ------ | ------------------ | --------------------------------------------- |
 | GET    | `api/heroes/:hero` | Returns detailed guide data for a single Hero |
+
+---
 
 
 
