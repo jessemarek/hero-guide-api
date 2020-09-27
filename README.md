@@ -75,7 +75,7 @@ An API I am building to serve data to my shhg-react project.
   ],
   "fusion_items": {
   // Each fusion set consists of 6 item names in an array.
-  // fusions for will be returned for:
+  // fusions sets will be returned for:
   // "purple", "purple1", "purple2", "purple3","purple4", 
   // "orange", "orange1", and "orange2"
     "purple": [
