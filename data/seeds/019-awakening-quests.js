@@ -27,7 +27,7 @@ exports.seed = function (knex) {
           hero_id: 4,
           awakened: true,
           quote: "The Divine Light guides us!",
-          sig_item: "protectors-wings",
+          sig_item: "protector's-wings",
         },
         {
           hero_id: 5,
