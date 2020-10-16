@@ -26,7 +26,7 @@ exports.seed = function (knex) {
         {
           trial_name: "Valley of the Broken Halberd",
           trial_icon: "broken-halberd",
-          completions: 0,
+          completions: 10,
           awakening_id: 4,
         },
         {
