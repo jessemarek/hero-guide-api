@@ -1,63 +1,81 @@
-
 exports.seed = function (knex) {
   // Deletes ALL existing entries
-  return knex('sig_stats').truncate()
+  return knex("sig_stats")
+    .truncate()
     .then(function () {
       // Inserts seed entries
-      return knex('sig_stats').insert([
+      return knex("sig_stats").insert([
         {
-          stat: 'max-health',
+          stat: "max-health",
           value: 1100,
           enchant: 987,
-          awakening_id: 1
+          awakening_id: 1,
         },
         {
-          stat: 'magic-attack',
+          stat: "magic-attack",
           value: 200,
           enchant: 182,
-          awakening_id: 1
+          awakening_id: 1,
         },
         {
-          stat: 'physical-armor',
+          stat: "physical-armor",
           value: 20,
           enchant: 21,
-          awakening_id: 1
+          awakening_id: 1,
         },
         {
-          stat: 'magic-armor',
+          stat: "magic-armor",
           value: 15,
           enchant: 14,
-          awakening_id: 1
+          awakening_id: 1,
         },
         {
-          stat: 'none',
+          stat: "none",
           value: 0,
           enchant: 0,
-          awakening_id: 2
+          awakening_id: 2,
         },
         {
-          stat: 'none',
+          stat: "none",
           value: 0,
           enchant: 0,
-          awakening_id: 3
+          awakening_id: 3,
         },
         {
-          stat: 'none',
-          value: 0,
-          enchant: 0,
-          awakening_id: 4
+          stat: "max-health",
+          value: 700,
+          enchant: 630,
+          awakening_id: 4,
         },
         {
-          stat: 'none',
-          value: 0,
-          enchant: 0,
-          awakening_id: 5
+          stat: "magic-attack",
+          value: 200,
+          enchant: 182,
+          awakening_id: 4,
         },
         {
-          stat: 'none',
+          stat: "magic-crit",
+          value: 60,
+          enchant: 56,
+          awakening_id: 4,
+        },
+        {
+          stat: "magic-pierce",
+          value: 50,
+          enchant: 42,
+          awakening_id: 4,
+        },
+        {
+          stat: "none",
           value: 0,
           enchant: 0,
-          awakening_id: 6
+          awakening_id: 5,
+        },
+        {
+          stat: "none",
+          value: 0,
+          enchant: 0,
+          awakening_id: 6,
         },
       ]);
     });
