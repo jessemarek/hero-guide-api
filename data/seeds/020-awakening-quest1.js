@@ -38,11 +38,11 @@ exports.seed = function (knex) {
           awakening_id: 4,
         },
         {
-          chapter: "none",
-          fragment: "none",
-          item_1: "none",
-          item_2: "none",
-          item_3: "none",
+          chapter: "Chapter 13 - Divided Opinion",
+          fragment: "scarlet-feather",
+          item_1: "torch-of-destruction",
+          item_2: "spartan-dagger",
+          item_3: "ghostly-mantle",
           awakening_id: 5,
         },
         {

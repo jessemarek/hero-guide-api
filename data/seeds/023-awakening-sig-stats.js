@@ -66,9 +66,27 @@ exports.seed = function (knex) {
           awakening_id: 4,
         },
         {
-          stat: "none",
-          value: 0,
-          enchant: 0,
+          stat: "max-health",
+          value: 1000,
+          enchant: 903,
+          awakening_id: 5,
+        },
+        {
+          stat: "physical-attack",
+          value: 220,
+          enchant: 196,
+          awakening_id: 5,
+        },
+        {
+          stat: "physical-armor",
+          value: 30,
+          enchant: 28,
+          awakening_id: 5,
+        },
+        {
+          stat: "magic-armor",
+          value: 35,
+          enchant: 35,
           awakening_id: 5,
         },
         {

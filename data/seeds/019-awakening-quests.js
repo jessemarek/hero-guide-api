@@ -32,8 +32,8 @@ exports.seed = function (knex) {
         {
           hero_id: 5,
           awakened: true,
-          quote: "none",
-          sig_item: "none",
+          quote: "I can hit a quarter from a quarter mile!",
+          sig_item: "hunter's-cap",
         },
         {
           hero_id: 6,

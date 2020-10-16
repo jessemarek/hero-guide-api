@@ -30,9 +30,9 @@ exports.seed = function (knex) {
           awakening_id: 4,
         },
         {
-          trial_name: "none",
-          trial_icon: "none",
-          completions: 0,
+          trial_name: "Tidal Temple",
+          trial_icon: "tidal-temple",
+          completions: 6,
           awakening_id: 5,
         },
         {

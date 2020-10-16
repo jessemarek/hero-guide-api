@@ -21,13 +21,13 @@ exports.seed = function (knex) {
           awakening_id: 3,
         },
         {
-          chapter: "3rd Quest - Chapter 14 - Powerful Knowledge",
+          chapter: "Chapter 14 - Powerful Knowledge",
           requirement: "Serafine must kill Mariana (Heroic Difficulty)",
           awakening_id: 4,
         },
         {
-          chapter: "none",
-          requirement: "none",
+          chapter: "Chapter 14 - Mt. Rathscar",
+          requirement: "Slim must kill Ariel (Heroic Difficulty)",
           awakening_id: 5,
         },
         {
