@@ -208,39 +208,82 @@ exports.seed = function (knex) {
           ability_id: 18,
         },
         {
-          stat_details: "x",
+          stat_details: "(+ 3 Damage per Ability Point)",
           ability_id: 19,
         },
         {
-          stat_details: "x",
+          stat_details: "Level 100: Every hit deals a base of 300 Damage",
+          ability_id: 19,
+        },
+        {
+          stat_details: "(+ 4 Damage per Ability Point)",
           ability_id: 20,
         },
         {
-          stat_details: "x",
+          stat_details: "Level 100: Every hit deals a base of 400 Damage",
+          ability_id: 20,
+        },
+        {
+          stat_details: "(Base 120 + 6 Damage per Ability Point)",
           ability_id: 21,
         },
         {
-          stat_details: "x",
+          stat_details: "Level 80: Every hit deals a base of 600 Damage",
+          ability_id: 21,
+        },
+        {
+          stat_details: "(Base 200 + 5 Damage per Ability Point)",
           ability_id: 22,
         },
         {
-          stat_details: "x",
+          stat_details: "Level 60: Every hit deals a base of 500 Damage",
+          ability_id: 22,
+        },
+        {
+          stat_details:
+            "Stun Success Rate increases with ability level. Enemies under level 100 will be Stunned every time",
+          ability_id: 22,
+        },
+        {
+          stat_details: "(+ 30 Damage per Ability Point)",
           ability_id: 23,
         },
         {
-          stat_details: "x",
+          stat_details: "Level 100: Deals a base of 3000 Damage",
+          ability_id: 23,
+        },
+        {
+          stat_details: "(Base 40 + 0.5% per Ability Point)",
           ability_id: 24,
         },
         {
-          stat_details: "x",
+          stat_details:
+            "Level 100: Every hit deals 90% of the Damage of a Basic Attack",
+          ability_id: 24,
+        },
+        {
+          stat_details: "(Base 300 + 15 Damage per Ability Point)",
           ability_id: 25,
         },
         {
-          stat_details: "x",
+          stat_details: "Level 80: Deals a base of 1500 Damage",
+          ability_id: 25,
+        },
+        {
+          stat_details: "(Base 160 + 4 Crit Rating per Ability Point)",
           ability_id: 26,
         },
         {
-          stat_details: "x",
+          stat_details:
+            "Level 60: Passive: Increase Physical Crit Rating by 400",
+          ability_id: 26,
+        },
+        {
+          stat_details: "(Base 1280 + 20 Damage per Ability Point)",
+          ability_id: 27,
+        },
+        {
+          stat_details: "Level 40: Each bullet deals a maximum of 2080 Damage",
           ability_id: 27,
         },
       ]);
