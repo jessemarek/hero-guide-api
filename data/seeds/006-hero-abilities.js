@@ -131,34 +131,6 @@ exports.seed = function (knex) {
           hero_id: 4,
         },
         {
-          name: "Shock and Awe",
-          description:
-            "Open fire with twin machine guns and deal Magic Damage to an enemy. Will also launch missiles if the Homing Missile ability is unlocked",
-          attributes: "fire",
-          hero_id: 5,
-        },
-        {
-          name: "Laser Blast",
-          description:
-            "Shoot a powerful laser beam, inflict enormous Magic Damage on a single target",
-          attributes: "lightning",
-          hero_id: 5,
-        },
-        {
-          name: "Quad-Strike",
-          description:
-            "Use a Multi-barrel Launcher to shoot four guided missiles and deal Magic Damage to an enemy",
-          attributes: "none",
-          hero_id: 5,
-        },
-        {
-          name: "Homing Missile",
-          description:
-            "Launch a pair of homing missiles. Each missile will deal Magic Damage to a random enemy and Stun them",
-          attributes: "none",
-          hero_id: 5,
-        },
-        {
           name: "Magnum",
           description:
             "Fire a large caliber round, deal severe Physical Damage to the weakest enemy and Interrupt enemy attacks",
@@ -170,26 +142,54 @@ exports.seed = function (knex) {
           description:
             "Unload on an enemy with two weapons, dealing multiple Physical Damage attacks in rapid succession",
           attributes: "none",
-          hero_id: 6,
+          hero_id: 5,
         },
         {
           name: "Flaming Bolt",
           description:
             "Fire a flaming bolt from your crossbow, dealing AoE Physical Damage",
           attributes: "none",
-          hero_id: 6,
+          hero_id: 5,
         },
         {
           name: "Eagle Eye",
           description:
             "Slim's excellent eyesight increases his Physical Crit Rating, making him even more deadly behind the barrel or bow",
           attributes: "none",
-          hero_id: 6,
+          hero_id: 5,
         },
         {
           name: "Armor-Piercing Rounds",
           description:
             "Slim replaces his normal bullets with Armor-Piercing Rounds, which deal additional Damage that is unaffected by Armor. The more Energy the target has, the more additional Damage is dealt",
+          attributes: "none",
+          hero_id: 5,
+        },
+        {
+          name: "Shock and Awe",
+          description:
+            "Open fire with twin machine guns and deal Magic Damage to an enemy. Will also launch missiles if the Homing Missile ability is unlocked",
+          attributes: "fire",
+          hero_id: 6,
+        },
+        {
+          name: "Laser Blast",
+          description:
+            "Shoot a powerful laser beam, inflict enormous Magic Damage on a single target",
+          attributes: "lightning",
+          hero_id: 6,
+        },
+        {
+          name: "Quad-Strike",
+          description:
+            "Use a Multi-barrel Launcher to shoot four guided missiles and deal Magic Damage to an enemy",
+          attributes: "none",
+          hero_id: 6,
+        },
+        {
+          name: "Homing Missile",
+          description:
+            "Launch a pair of homing missiles. Each missile will deal Magic Damage to a random enemy and Stun them",
           attributes: "none",
           hero_id: 6,
         },
