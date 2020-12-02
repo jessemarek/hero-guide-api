@@ -204,13 +204,9 @@ function insertQuest3(id, data) {
   return db("quest_3").insert(questData);
 }
 
-function insertSigItemStats(id) {
-  return db("sig_stats").insert({
-    awakening_id: id,
-    stat: "none",
-    value: 0,
-    enchant: 0,
-  });
+function insertSigItemStats(id, data) {
+  const statsData = data.map((stat) => ({ ...stat, awakening_id: id }));
+  return db("sig_stats").insert(statsData);
 }
 
 function insertForgeBonus(id, data) {
