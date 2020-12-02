@@ -32,11 +32,11 @@ async function add(hero) {
     await insertAcademyData(id, academy);
 
     const [awakeningId] = await insertAwakeningData(id, awakening);
-    await insertQuest1(awakeningId);
-    await insertQuest2(awakeningId);
-    await insertQuest3(awakeningId);
-    await insertSigItemStats(awakeningId);
-    await insertForgeBonus(awakeningId);
+    await insertQuest1(awakeningId, awakening.quest_1);
+    await insertQuest2(awakeningId, awakening.quest_2);
+    await insertQuest3(awakeningId, awakening.quest_3);
+    await insertSigItemStats(awakeningId, awakening.sig_stats);
+    await insertForgeBonus(awakeningId, awakening.forge_bonus);
 
     return findById(id);
   } catch (error) {
@@ -148,13 +148,8 @@ async function insertAbilitiesData(id, data) {
 function insertFusionsData(id, data) {
   asyncForEach(Object.keys(data), (key) => {
     const fusion = {
+      ...data[key],
       hero_id: id,
-      slot_1: data[key][0],
-      slot_2: data[key][1],
-      slot_3: data[key][2],
-      slot_4: data[key][3],
-      slot_5: data[key][4],
-      slot_6: data[key][5],
     };
 
     return db(key).insert(fusion);
@@ -178,39 +173,32 @@ function insertAwakeningData(id, data) {
     {
       hero_id: id,
       awakened: data.awakened,
-      quote: "none",
-      sig_item: "none",
+      quote: data.quote,
+      sig_item: data.sig_item,
     },
     "id"
   );
 }
 
-function insertQuest1(id) {
+function insertQuest1(id, data) {
   const questData = {
-    chapter: "none",
-    fragment: "none",
-    item_1: "none",
-    item_2: "none",
-    item_3: "none",
+    ...data,
     awakening_id: id,
   };
   return db("quest_1").insert(questData);
 }
 
-function insertQuest2(id) {
+function insertQuest2(id, data) {
   const questData = {
-    trial_name: "none",
-    trial_icon: "none",
-    completions: 0,
+    ...data,
     awakening_id: id,
   };
   return db("quest_2").insert(questData);
 }
 
-function insertQuest3(id) {
+function insertQuest3(id, data) {
   const questData = {
-    chapter: "none",
-    requirement: "none",
+    ...data,
     awakening_id: id,
   };
   return db("quest_3").insert(questData);
@@ -225,14 +213,8 @@ function insertSigItemStats(id) {
   });
 }
 
-function insertForgeBonus(id) {
-  const dataObject = {
-    stat: "none",
-    bonus: "none",
-    value: 0,
-    awakening_id: id,
-  };
-  const bonusData = new Array(3).fill(dataObject);
+function insertForgeBonus(id, data) {
+  const bonusData = data.map((item) => ({ ...item, awakening_id: id }));
   return db("forge_bonus").insert(bonusData);
 }
 
