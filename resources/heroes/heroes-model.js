@@ -54,7 +54,7 @@ async function find() {
       .select(
         "h.name",
         "h.position",
-        "h.first_appeared",
+        "h.chest_type",
         "h.available_in",
         "aq.awakened"
       );
