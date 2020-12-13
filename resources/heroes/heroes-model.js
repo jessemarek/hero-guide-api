@@ -59,9 +59,16 @@ async function find() {
         "aq.awakened"
       );
 
-    return heroes.map((h) =>
-      h.awakened ? { ...h, awakened: true } : { ...h, awakened: false }
-    );
+    const skins = await db("heroes as h")
+      .join("skins as s", "s.hero_id", "h.id")
+      .select("h.name");
+    const haveSkins = skins.map((hero) => hero.name);
+
+    return heroes.map((h) => {
+      h.awakened ? (h.awakened = true) : (h.awakened = false);
+      haveSkins.includes(h.name) ? (h.hasSkin = true) : (h.hasSkin = false);
+      return h;
+    });
   } catch (error) {
     throw error;
   }
@@ -76,6 +83,7 @@ function findBy(filter) {
     getKeyItems(filter),
     getHeroTrees(filter),
     getAwakeningQuest(filter),
+    getHeroSkin(filter),
   ])
     .then((data) => {
       return {
@@ -85,6 +93,7 @@ function findBy(filter) {
         key_items: data[3],
         academy_trees: data[4],
         awakening: data[5],
+        skin: data[6],
       };
     })
     .catch((error) => error);
@@ -420,4 +429,14 @@ async function asyncForEach(array, callback) {
   for (let index = 0; index < array.length; index++) {
     await callback(array[index], index, array);
   }
+}
+
+async function getHeroSkin(filter) {
+  const skin = await db("heroes as h")
+    .where(filter)
+    .join("skins as s", "s.hero_id", "h.id")
+    .select("s.skin_name", "s.ability", "s.details")
+    .first();
+
+  return skin ? skin : "none";
 }
