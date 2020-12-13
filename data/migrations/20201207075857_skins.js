@@ -6,7 +6,7 @@ exports.up = function (knex) {
         // Primary Key
         tbl.increments();
 
-        tbl.string("name", 64);
+        tbl.string("skin_name", 64);
         tbl.string("ability", 64);
         tbl.string("details", 128);
 
@@ -22,4 +22,6 @@ exports.up = function (knex) {
   );
 };
 
-exports.down = function (knex) {};
+exports.down = function (knex) {
+  knex.schema.dropTableIfExists("skins");
+};
